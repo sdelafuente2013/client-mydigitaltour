@@ -1,0 +1,30 @@
+[
+    {
+    "id": 1,
+    "name": "Titanic",
+    "rating": 5,
+    "created_at": "2023-02-08T13:00:10.068Z",
+    "updated_at": "2023-02-08T13:00:10.068Z"
+    },
+    {
+    "id": 2,
+    "name": "We were soldiers",
+    "rating": 4,
+    "created_at": "2023-02-08T13:00:10.074Z",
+    "updated_at": "2023-02-08T13:00:10.074Z"
+    },
+    {
+    "id": 3,
+    "name": "L’amour quand elle nous tient",
+    "rating": 5,
+    "created_at": "2023-02-08T13:00:10.076Z",
+    "updated_at": "2023-02-08T13:00:10.076Z"
+    },
+    {
+    "id": 4,
+    "name": "Nobody's Fool",
+    "rating": 2,
+    "created_at": "2023-02-08T13:00:10.079Z",
+    "updated_at": "2023-02-08T13:00:10.079Z"
+    }
+    ]
