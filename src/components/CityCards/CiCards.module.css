@@ -1,0 +1,11 @@
+img {
+    width: 100%; /* Ancho completo de la imagen */
+    height: auto; /* Altura automática para mantener la relación de aspecto */
+  }
+
+  @media (max-width: 767px) { /* Para pantallas con un ancho máximo de 767px */
+    img {
+      width: 50%; /* Ancho de la imagen al 50% */
+      height: auto; /* Altura automática para mantener la relación de aspecto */
+    }
+  }

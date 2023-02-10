@@ -26,7 +26,7 @@ export const HomeBaner = () =>{
         </select>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Buscar</button>
+          <button className="btn btn-primary bg-orange-400 text-neutral-50	">Buscar</button>
         </div>
       </div>
     </div>

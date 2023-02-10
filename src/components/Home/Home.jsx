@@ -36,8 +36,9 @@ return(
   <h3 class="font-bold m-10 text-2xl truncate">Free tours mas populares</h3>
   <p class="normal-case">Unete a los Free tours mas populares, en ciudades como Barcelona, Amsterdam, Berlin o Praga</p>
 </article>
+<div class="flex  justify-center">
 <Citys/>
-
+</div>
     </div>
 )
 }

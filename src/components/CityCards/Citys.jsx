@@ -13,11 +13,10 @@ const citys = require("./City.json")
     console.log(city)
 return(
 <div class="container ">
-    <div class="flex flex-wrap -mx-2 flex justify-center">
-        {city?.map((ele) =>   <div class="w-full md:w-1/3 px-2 py-4"> <CiCards id={ele.id} name={ele.name} country={ele.country} image={ele.image}/></div>)}
+    <div class="flex flex-wrap justify-center w-full">
+        {city?.map((ele) =>   <div class="  xl:w-1/3 px-2 py-4 flex flex-wrap justify-center mx-auto"> <CiCards id={ele.id} name={ele.name} country={ele.country} image={ele.image}/></div>)}
     </div>
-    </div>
-
+</div>
 )
 }
 export default Citys
