@@ -1,39 +1,10 @@
 import React, { useEffect } from "react";
 import axios from "axios";
-import { Card } from "./Card";
+import { HomeBaner } from "../Baner/HomeBaner";
+import  Citys  from "../CityCards/Citys";
 export const Home = () =>{
 
-    const [datos, setDatos] = React.useState()
-// const [datos, setDatos] = React.useState([
-//     {
-//     id: 1,
-//     name: "Titanic",
-//     rating: 5,
-//     created_at: "2023-02-08T13:00:10.068Z",
-//     updated_at: "2023-02-08T13:00:10.068Z"
-//     },
-//     {
-//     id: 2,
-//     name: "We were soldiers",
-//     rating: 4,
-//     created_at: "2023-02-08T13:00:10.074Z",
-//     updated_at: "2023-02-08T13:00:10.074Z"
-//     },
-//     {
-//     "id": 3,
-//     "name": "L’amour quand elle nous tient",
-//     "rating": 5,
-//     "created_at": "2023-02-08T13:00:10.076Z",
-//     "updated_at": "2023-02-08T13:00:10.076Z"
-//     },
-//     {
-//     id: 4,
-//     name: "Nobody's Fool",
-//     rating: 2,
-//     created_at: "2023-02-08T13:00:10.079Z",
-//     updated_at: "2023-02-08T13:00:10.079Z"
-//     }
-//     ])    
+    const [datos, setDatos] = React.useState()  
 let obj = {
     name: "ejemplo"
 }
@@ -60,7 +31,13 @@ catch(err){
   console.log(datos);
 return(
     <div>
-{datos?.map((ele) => <Card id={ele.id} name={ele.name} rating={ele.rating} />)}
+<HomeBaner/>
+<article class="prose">
+  <h3 class="font-bold m-10 text-2xl truncate">Free tours mas populares</h3>
+  <p class="normal-case">Unete a los Free tours mas populares, en ciudades como Barcelona, Amsterdam, Berlin o Praga</p>
+</article>
+<Citys/>
+
     </div>
 )
 }
