@@ -3,37 +3,43 @@
         "id": 1,
       "country": "FR",
       "name": "Lyon",
-      "image": "https://images.hola.com/imagenes/viajes/20181217134518/lyon-ciudades-francia/0-630-22/lyon-t.jpg"
+      "image": "https://images.hola.com/imagenes/viajes/20181217134518/lyon-ciudades-francia/0-630-22/lyon-t.jpg",
+      "Baner": "https://avf.asso.fr/lyon/wp-content/uploads/sites/71/2018/02/banner-local-e1548842736943.jpg"
     },
     {
         "id": 3,
       "country": "ES",
       "name": "Barcelona",
-      "image": "https://pro.static.holabarcelona.com/images/1759/resize/560/1366/5.jpg"
+      "image": "https://pro.static.holabarcelona.com/images/1759/resize/560/1366/5.jpg",
+      "baner": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Barcelona_panorma_banner.jpg"
     },
     {
         "id": 4,
       "country": "PT",
       "name": "Lisboa",
-      "image": "https://thumbs.dreamstime.com/b/skyline-da-cidade-de-lisboa-portugal-112481969.jpg"
+      "image": "https://thumbs.dreamstime.com/b/skyline-da-cidade-de-lisboa-portugal-112481969.jpg",
+      "baner": "https://www.scclive.org/wp-content/uploads/2018/10/lisbon-banner.jpg"
     },
     {
         "id": 5,
       "country": "UK",
       "name": "Londres",
-      "image": "https://p4.wallpaperbetter.com/wallpaper/85/952/910/london-england-big-ben-big-ben-london-telephone-booth-and-cars-wallpaper-preview.jpg"
+      "image": "https://p4.wallpaperbetter.com/wallpaper/85/952/910/london-england-big-ben-big-ben-london-telephone-booth-and-cars-wallpaper-preview.jpg",
+      "Baner": "https://d3iso9mq9tb10q.cloudfront.net/magefan_blog/3/-/3-days-in-london_banner_3.jpg"
     },
     {
         "id": 6,
       "country": "ES",
       "name": "Barcelona",
-      "image": "https://pro.static.holabarcelona.com/images/1759/resize/560/1366/5.jpg"
+      "image": "https://pro.static.holabarcelona.com/images/1759/resize/560/1366/5.jpg",
+      "Baner": "https://avf.asso.fr/lyon/wp-content/uploads/sites/71/2018/02/banner-local-e1548842736943.jpg"
     },
     {
         "id": 7,
       "country": "ES",
       "name": "Barcelona",
-      "image": "https://pro.static.holabarcelona.com/images/1759/resize/560/1366/5.jpg"
+      "image": "https://pro.static.holabarcelona.com/images/1759/resize/560/1366/5.jpg",
+      "Baner": "https://avf.asso.fr/lyon/wp-content/uploads/sites/71/2018/02/banner-local-e1548842736943.jpg"
     }
 
   ]
