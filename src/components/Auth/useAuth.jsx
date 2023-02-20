@@ -1,6 +1,7 @@
 import react, { useState } from "react"
 import axios from "axios"
 import { success } from "daisyui/src/colors"
+
 export const useAuth = () =>{
 
 const [login, setLogin] = useState({
@@ -39,10 +40,6 @@ const handleRegister =  async (e) => {
   };
 
 
-   let user= {
-    email: login.email,
-    password: login.contraseña
-  }
   
   const handleLogin = async (e) => {
     try {
@@ -53,14 +50,11 @@ const handleRegister =  async (e) => {
             email: login.email,
             password: login.password,
           },
-        },
-        {
-          headers: {
-            "Content-Type": "application/json"
-          },
         }
       )
-  .then((suces) =>console.log(suces))        
+      
+      .then((succes) => console.log(succes))
+  
       setLogin({
         email: "",
         password: "",
@@ -69,7 +63,6 @@ const handleRegister =  async (e) => {
       console.error(error);
     }
   };
-
 
 return{
     login, setLogin, changeInput, handleLogin, setRegistro, registro, handleRegister
