@@ -19,6 +19,7 @@ React.useEffect(async () => {
         'Access-Control-Allow-Origin': '*'
       }
     });
+    console.log(datos.data)
     setDatos(datos.data);
 }
 catch(err){
