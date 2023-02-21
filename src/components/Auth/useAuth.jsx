@@ -1,70 +1,43 @@
-import react, { useState } from "react"
+import react, { useEffect, useState } from "react"
 import axios from "axios"
+import { useHistory } from "react-router-dom"
 import { success } from "daisyui/src/colors"
-
 export const useAuth = () =>{
 
-const [login, setLogin] = useState({
+const history = useHistory()
+
+const [user, setUser] = useState({
     email: "",
     password: "",
 })
 const [registro, setRegistro] = useState(false)
+const [url, setUrl] = useState("")
+
 const changeInput = (e) =>{
-setLogin({...login,
+  setUser({...user,
     [e.target.name]: e.target.value,})
 }
 
-const handleRegister =  async (e) => {
-    try {
-      const response = await axios.post(
-        'https://api-mydigitaltour.herokuapp.com/users',
-       
-				{
-					user :{
-					     email: login.email,
-					 password: login.password,
-				}
-       
-          }
-      )
-      .then((succes) => console.log(succes) )
-      console.log(response)
-      console.log(response);
-      setLogin({
-        email: "",
-        password: ""
-      });
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-
-  
   const handleLogin = async (e) => {
     try {
       const response = await axios.post(
-        'https://api-mydigitaltour.herokuapp.com/users/sign_in',
+        `https://api-mydigitaltour.herokuapp.com${url}`,
         {
-          user: {
-            email: login.email,
-            password: login.password,
-          },
-        }
-      )
-      
-      .then((succes) => console.log(succes))
-  
-      setLogin({
-        email: "",
-        password: "",
+          user
+        },
+      );
+        localStorage.setItem("accessToken", response.headers.authorization.split(" ")[1])
+     
+        setUser({
+        email: '',
+        password: '',
       });
+      history.push("/userPanel")
     } catch (error) {
       console.error(error);
     }
   };
-
 return{
-    login, setLogin, changeInput, handleLogin, setRegistro, registro, handleRegister
+  user, setUser, changeInput, handleLogin, setRegistro, registro, setUrl
 }
 }

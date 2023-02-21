@@ -3,17 +3,14 @@ import { useAuth } from "./useAuth";
 import axios from "axios"
 export const Login = () => {
 
-  const { login, setLogin, changeInput, handleLogin, handleRegister  } = useAuth();
+  const { user, setUser, changeInput, handleLogin, setUrl  } = useAuth();
   const [registro, setRegistro] = useState(false)
 
-useEffect( async ()=>{
-  let datos = await axios.get("https://api-mydigitaltour.herokuapp.com/movies", localStorage.getItem('accessToken'), {
-    headers: {
-      'Access-Control-Allow-Origin': '*'
-    }
-  });
-  // console.log(datos)
-})
+  useEffect(() =>{
+    setUrl("/users/sign_in")
+    if(registro) setUrl("/users/sign_in")
+    else  setUrl("/users")
+  },[registro])
 
   return (
     <header>
@@ -27,7 +24,7 @@ useEffect( async ()=>{
                 type="email"
                 name="email"
                 onChange={(e) => changeInput(e)}
-                value={login.email}
+                value={user.email}
                 id="name"
                 placeholder="hola@tuemail.com"
                 className="w-full"
@@ -44,7 +41,7 @@ useEffect( async ()=>{
                 type="password"
                 name="password"
                 onChange={(e) => changeInput(e)}
-                value={login.password}
+                value={user.password}
                 id="password"
                 placeholder="********"
                 className="w-full"
@@ -60,7 +57,7 @@ useEffect( async ()=>{
               :
               <button
               className="bg-green-500 text-white px-4 py-2 rounded-full w-full"
-              onClick={() => handleRegister()}>
+              onClick={() => handleLogin()}>
               Crear cuenta
             </button>
               }

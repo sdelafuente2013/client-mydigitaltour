@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.1.1",
     "axios": "^1.2.0",
     "daisyui": "^2.46.1",
+    "dotenv": "^16.0.3",
     "flowbite": "^1.6.3",
     "jsonfile": "^6.1.0",
     "react": "^17.0.2",

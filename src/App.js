@@ -5,6 +5,7 @@ import { Route, Switch } from "react-router";
 import { Nav } from './components/Nav/Nav';
 import { Ciudades } from './components/Ciudades/Ciudades';
 import { Login } from './components/Auth/Login';
+import { UserPanel } from './components/UserPanel/UserPanel';
 function App() {
   return (
     <div className="App">
@@ -15,6 +16,7 @@ function App() {
 
       <Route exact path="/ciudad/:id" component={Ciudades} />
       <Route exact path="/Login" component={Login} />
+      <Route exact path="/userPanel" component={UserPanel} />
 
       </Switch>
     </div>
