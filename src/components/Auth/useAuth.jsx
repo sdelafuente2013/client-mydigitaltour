@@ -11,7 +11,7 @@ const [user, setUser] = useState({
     password: "",
 })
 const [registro, setRegistro] = useState(false)
-const [url, setUrl] = useState("")
+const [url, setUrl] = useState("/users/sign_in")
 
 const changeInput = (e) =>{
   setUser({...user,

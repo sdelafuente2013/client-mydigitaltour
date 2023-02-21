@@ -6,10 +6,12 @@ import { Nav } from './components/Nav/Nav';
 import { Ciudades } from './components/Ciudades/Ciudades';
 import { Login } from './components/Auth/Login';
 import { UserPanel } from './components/UserPanel/UserPanel';
+import { useLocation } from 'react-router';
 function App() {
+  const location = useLocation()
   return (
     <div className="App">
-            <Nav /> 
+            {location.pathname === "/userPanel" ? null : <Nav /> }
 
       <Switch>
       <Route exact path="/" component={Home} />

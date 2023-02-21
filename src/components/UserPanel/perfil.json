@@ -1,0 +1,19 @@
+{
+    "nombre": "María",
+    "apellido": "García",
+    "edad": 32,
+    "email": "mariagarcia@agenciadetours.com",
+    "telefono": "+34 555 123 456",
+    "verificado": true,
+    "profilePic": "https://www.shutterstock.com/image-photo/young-handsome-man-beard-wearing-260nw-1817367890.jpg",
+    "direccion": {
+      "calle": "Calle Gran Vía",
+      "numero": "25",
+      "piso": "4",
+      "puerta": "B",
+      "codigo_postal": "28013",
+      "ciudad": "Madrid",
+      "pais": "España"
+    }
+
+}
