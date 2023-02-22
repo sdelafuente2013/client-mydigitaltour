@@ -1,12 +1,24 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import axios from "axios"
 export const NavPanel = (props) =>{
 
 const history = useHistory()
-    const logout = () =>{
+const token = localStorage.getItem("accessToken")
 
-        localStorage.removeItem("accessToken")
-        history.push("/")
+    const logout = async() =>{
+      try{
+        axios.delete("https://api-mydigitaltour.herokuapp.com/users/sign_out", {
+         headers: {
+           Authorization: `Bearer ${token}`,
+           'Content-Type': 'application/json'
+         }
+       })
+       .then((succes) => localStorage.removeItem("accessToken"),  history.push("/"))
+   }
+   catch(err){
+       console.log(err)
+   }
       }
     return(
 <nav class="bg-white border-gray-200 dark:bg-gray-900">

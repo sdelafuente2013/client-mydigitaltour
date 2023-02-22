@@ -14,6 +14,25 @@
       "codigo_postal": "28013",
       "ciudad": "Madrid",
       "pais": "España"
+    },
+    "tours":{
+      "tour1":{
+        "precio": 2,
+        "localidad": "madrid",
+        "coordenadas de inicio":{
+          "latitud": "",
+          "logitud": ""
+        },
+        "coordenadas de final":{
+          "latitud": "",
+          "logitud": ""
+        },
+        "descripcion": "Descripcion del tour",
+        "imagen": "imagen.jpg",
+        "imagenes": [],
+        "verificado": true,
+        "reseñas": []
+      }
     }
 
 }

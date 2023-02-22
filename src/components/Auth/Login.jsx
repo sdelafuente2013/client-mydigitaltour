@@ -7,7 +7,7 @@ export const Login = () => {
   const [registro, setRegistro] = useState(false)
 
   useEffect(() =>{
-    if(registro) setUrl("/users/sign_in")
+    if(!registro) setUrl("/users/sign_in")
     else  setUrl("/users")
   },[registro])
 
