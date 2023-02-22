@@ -15,7 +15,7 @@
       "ciudad": "Madrid",
       "pais": "España"
     },
-    "tours":{
+    "tours":[{
       "tour1":{
         "precio": 2,
         "localidad": "madrid",
@@ -33,6 +33,6 @@
         "verificado": true,
         "reseñas": []
       }
-    }
+    }]
 
 }

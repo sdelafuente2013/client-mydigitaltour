@@ -2,13 +2,15 @@ import react, { useEffect, useState } from "react"
 import axios from "axios"
 import { useHistory } from "react-router-dom"
 import { success } from "daisyui/src/colors"
+import { useLocation } from "react-router-dom"
 export const useAuth = () =>{
 
 const history = useHistory()
-
+const location = useLocation()
 const [user, setUser] = useState({
     email: "",
     password: "",
+    // type: location.pathname === "/login" ? "guia" : "user"
 })
 const [registro, setRegistro] = useState(false)
 const [url, setUrl] = useState("/users/sign_in")

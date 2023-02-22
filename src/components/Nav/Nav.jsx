@@ -50,7 +50,7 @@ const [login, SetLogin] = useState(false)
   </div>
   <div className="navbar-end">
     {!localStorage.length ? 
-   <Link to="/Login"> <a onClick={() => SetLogin(true)} className="btn">Ingresa</a></Link>
+   <Link to="/login"> <a onClick={() => SetLogin(true)} className="btn">Ingresa</a></Link>
    :
    <Link to="/"> <a onClick={() => logout()} className="btn">Salir</a></Link>
   }
