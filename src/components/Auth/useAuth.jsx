@@ -10,7 +10,10 @@ const location = useLocation()
 const [user, setUser] = useState({
     email: "",
     password: "",
-    // type: location.pathname === "/login" ? "guia" : "user"
+    name: "",
+    type: location.pathname === "/" ? "user" : "guia",
+    about: "",
+    active: location.pathname === "/" ? true : false,
 })
 const [registro, setRegistro] = useState(false)
 const [url, setUrl] = useState("/users/sign_in")
@@ -20,10 +23,12 @@ const changeInput = (e) =>{
     [e.target.name]: e.target.value,})
 }
 
+
   const handleLogin = async (e) => {
     try {
       const response = await axios.post(
         `https://api-mydigitaltour.herokuapp.com${url}`,
+        
         {
           user
         },
@@ -31,8 +36,12 @@ const changeInput = (e) =>{
         localStorage.setItem("accessToken", response.headers.authorization.split(" ")[1])
      
         setUser({
-        email: '',
-        password: '',
+          email: "",
+          password: "",
+          name: "",
+          type: location.pathname === "/" ? "user" : "guia",
+          about: "",
+          active: location.pathname === "/" ? true : false,
       });
       history.push("/userPanel")
     } catch (error) {
