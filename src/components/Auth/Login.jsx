@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { useAuth } from "./useAuth";
 export const Login = () => {
 
@@ -66,6 +67,9 @@ export const Login = () => {
                   ¿Aun no tienes cuenta? <a onClick={() => setRegistro(!registro)} class="font-medium text-primary-600 hover:underline dark:text-primary-500">Ingresa aqui</a>
               </p>  
                   }
+                              <div class="text-left">
+
+            </div>
             </div>
         </div>
     </div>

@@ -7,6 +7,7 @@ import { Ciudades } from './components/Ciudades/Ciudades';
 import { Login } from './components/Auth/Login';
 import { UserPanel } from './components/UserPanel/UserPanel';
 import { useLocation } from 'react-router';
+import { GuiaRegister } from './components/Auth/GuiaRegister';
 function App() {
   const location = useLocation()
   return (
@@ -18,7 +19,9 @@ function App() {
 
       <Route exact path="/ciudad/:id" component={Ciudades} />
       <Route exact path="/login" component={Login} />
+      <Route exact path="/guia/register" component={GuiaRegister} />
       <Route exact path="/userPanel" component={UserPanel} />
+
 
       </Switch>
     </div>

@@ -11,9 +11,10 @@ const [user, setUser] = useState({
     email: "",
     password: "",
     name: "",
-    type: location.pathname === "/" ? "user" : "guia",
+    lastname: "",
+    role: location.pathname === "/" ? "user" : "guia",
     about: "",
-    active: location.pathname === "/" ? true : false,
+    status: location.pathname === "/" ? true : false,
 })
 const [registro, setRegistro] = useState(false)
 const [url, setUrl] = useState("/users/sign_in")
@@ -39,11 +40,13 @@ const changeInput = (e) =>{
           email: "",
           password: "",
           name: "",
-          type: location.pathname === "/" ? "user" : "guia",
+          lastname: "",
+          role: location.pathname === "/" ? "user" : "guia",
           about: "",
-          active: location.pathname === "/" ? true : false,
+          status: location.pathname === "/" ? true : false,
       });
       history.push("/userPanel")
+      
     } catch (error) {
       console.error(error);
     }

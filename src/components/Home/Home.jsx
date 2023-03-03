@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import axios from "axios";
 import { HomeBaner } from "../Baner/HomeBaner";
 import  Citys  from "../CityCards/Citys";
+import { Link } from "react-router-dom";
 export const Home = () =>{
 
     const [datos, setDatos] = React.useState()  
@@ -47,7 +48,8 @@ return(
     <div class="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
         <a href="#" class="w-full sm:w-auto bg-orange-500 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
             <div class="text-left">
-                <div class="-mt-1 font-sans text-sm font-semibold">Registrarme como guia</div>
+                <Link to="/guia/register"><span class="text-white font-semibold py-2 px-4">Convierte en guia</span></Link>
+
             </div>
         </a>
        
