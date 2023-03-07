@@ -13,14 +13,10 @@ const [movile, setMovile] = useState(false)
   }
 
     return(
-<nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900  container flex justify-between ">
-    <a href="https://flowbite.com/" class="flex items-center">
-        <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
+<nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900  container  ">
+  <div class="flex justify-between">
+        <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3" alt="Flowbite Logo" />
         <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">MyDigitalTour</span>
-    </a>
-    {/* <button class="flex flex-row items-center w-full md:w-auto px-4 py-4 mt-2 text-base font-bold text-left uppercase bg-orange-500 rounded-lg md:inline md:mt-0 md:ml-4 focus:outline-none font-montserrat">
-          <Link to="/guia/register"><span class="text-white font-semibold py-2 px-4">Convierte en guia</span></Link>
-      </button> */}
     <div class="relative group w-full md:mt-0 sm:max-w-md xl:p-0">
 
     <button class="flex flex-row items-center w-full md:w-auto px-4 py-4 mt-2 text-base font-bold text-left uppercase bg-white rounded-lg md:inline md:mt-0 md:ml-4 focus:outline-none font-montserrat hidden md:inline">
@@ -42,7 +38,9 @@ const [movile, setMovile] = useState(false)
           <button onClick={() => setMovile(!movile)}>x</button>
         <Login/> 
 
-        </div>: null}
+        </div>: 
+        null}
+      </div>
       </div>
 </nav>
 

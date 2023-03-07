@@ -5,7 +5,7 @@ import { Route, Switch } from "react-router";
 import { Nav } from './components/Nav/Nav';
 import { Ciudades } from './components/Ciudades/Ciudades';
 import { Login } from './components/Auth/Login';
-import { UserPanel } from './components/UserPanel/UserPanel';
+import { GuiaProfile } from './components/Guia_Panel/GuiaProfile';
 import { useLocation } from 'react-router';
 import { GuiaRegister } from './components/Auth/GuiaRegister';
 import { MovilNav } from './components/Nav/MovilNav';
@@ -13,7 +13,7 @@ function App() {
   const location = useLocation()
   return (
     <div className="App">
-            {location.pathname === "/userPanel" ? null : <Nav /> }
+            {location.pathname === "/guia/profile" ? null : <Nav /> }
 
       <Switch>
       <Route exact path="/" component={Home} />
@@ -21,7 +21,7 @@ function App() {
       <Route exact path="/ciudad/:id" component={Ciudades} />
       <Route exact path="/login" component={Login} />
       <Route exact path="/guia/register" component={GuiaRegister} />
-      <Route exact path="/userPanel" component={UserPanel} />
+      <Route exact path="/guia/profile" component={GuiaProfile} />
 
 
       </Switch>

@@ -3,6 +3,7 @@ import axios from "axios"
 import { useHistory } from "react-router-dom"
 import { success } from "daisyui/src/colors"
 import { useLocation } from "react-router-dom"
+import { validate } from "./validate"
 export const useAuth = () =>{
 
 const history = useHistory()
@@ -16,12 +17,17 @@ const [user, setUser] = useState({
     about: "",
     status: location.pathname === "/" ? true : false,
 })
+const [error, setError] = useState({})
+
 const [registro, setRegistro] = useState(false)
 const [url, setUrl] = useState("/users/sign_in")
 
-const changeInput = (e) =>{
-  setUser({...user,
-    [e.target.name]: e.target.value,})
+const changeInput = (e) => {
+  const { name, value } = e.target
+  const newInput = { ...user, [name]: value }
+  const newError = validate(newInput) 
+  setUser(newInput)
+  setError(newError)
 }
 
 
@@ -52,6 +58,6 @@ const changeInput = (e) =>{
     }
   };
 return{
-  user, setUser, changeInput, handleLogin, setRegistro, registro, setUrl
+  user, setUser, changeInput, handleLogin, setRegistro, registro, setUrl, error
 }
 }

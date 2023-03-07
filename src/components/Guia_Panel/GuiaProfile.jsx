@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react"
 import axios from "axios"
 import { NavPanel } from "./NavPanel";
 const perfil = require("./perfil.json")
-export const UserPanel = () =>{
+
+export const GuiaProfile = () =>{
 
 const [test, setTest] = useState()    
 const [profile, setProfile] = useState()    
