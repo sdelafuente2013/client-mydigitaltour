@@ -3,6 +3,7 @@ import axios from "axios";
 import { HomeBaner } from "../Baner/HomeBaner";
 import  Citys  from "../CityCards/Citys";
 import { Link } from "react-router-dom";
+import { MovilNav } from "../Nav/MovilNav";
 export const Home = () =>{
 
     const [datos, setDatos] = React.useState()  
@@ -55,7 +56,6 @@ return(
        
     </div>
 </div>
-
     </div>
 )
 }

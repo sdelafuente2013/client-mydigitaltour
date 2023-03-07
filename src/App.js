@@ -8,6 +8,7 @@ import { Login } from './components/Auth/Login';
 import { UserPanel } from './components/UserPanel/UserPanel';
 import { useLocation } from 'react-router';
 import { GuiaRegister } from './components/Auth/GuiaRegister';
+import { MovilNav } from './components/Nav/MovilNav';
 function App() {
   const location = useLocation()
   return (
@@ -24,6 +25,8 @@ function App() {
 
 
       </Switch>
+      <MovilNav/>
+
     </div>
   );
 }
