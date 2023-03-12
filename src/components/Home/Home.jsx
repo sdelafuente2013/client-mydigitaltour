@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import axios from "axios";
-import { HomeBaner } from "../Baner/HomeBaner";
-import  Citys  from "../CityCards/Citys";
+import { HomeBaner } from "./Baner/HomeBaner";
+import  Citys  from "./CityCards/Citys";
 import { Link } from "react-router-dom";
-import { MovilNav } from "../Nav/MovilNav";
+import { MovilNav } from "./Nav/MovilNav";
 export const Home = () =>{
 
     const [datos, setDatos] = React.useState()  
@@ -15,7 +15,7 @@ React.useEffect(async () => {
  
     try{
        
-     let datos = await axios.get("https://api-mydigitaltour.herokuapp.com/movies", {
+     let datos = await axios.get("/movies", {
     // let datos = await axios.get("https://cors-anywhere.herokuapp.com/https://api-mydigitaltour.herokuapp.com/movies", {
       headers: {
         'Access-Control-Allow-Origin': '*'

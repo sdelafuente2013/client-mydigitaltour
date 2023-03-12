@@ -3,8 +3,9 @@ import axios from "axios"
 import { useHistory } from "react-router-dom"
 import { success } from "daisyui/src/colors"
 import { useLocation } from "react-router-dom"
-import { validate } from "./validate"
-export const useAuth = () =>{
+import { validate } from "../Functions/validate"
+import { getInfo } from "../../redux/actions"
+export const useAuth = (dispatch) =>{
 
 const history = useHistory()
 const location = useLocation()
@@ -14,7 +15,7 @@ const [user, setUser] = useState({
     name: "",
     lastname: "",
     role: location.pathname === "/" ? "user" : "guia",
-    about: "",
+    about: location.pathname === "/" ? "es un usuario" : "",
     status: location.pathname === "/" ? true : false,
 })
 const [error, setError] = useState({})
@@ -34,7 +35,7 @@ const changeInput = (e) => {
   const handleLogin = async (e) => {
     try {
       const response = await axios.post(
-        `https://api-mydigitaltour.herokuapp.com${url}`,
+        `${url}`,
         
         {
           user
@@ -51,8 +52,8 @@ const changeInput = (e) => {
           about: "",
           status: location.pathname === "/" ? true : false,
       });
-      history.push("/userPanel")
-      
+      dispatch(getInfo(response.data))
+      history.push("/guia/profile")
     } catch (error) {
       console.error(error);
     }

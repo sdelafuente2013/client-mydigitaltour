@@ -8,7 +8,7 @@ const token = localStorage.getItem("accessToken")
 
     const logout = async() =>{
       try{
-        axios.delete("https://api-mydigitaltour.herokuapp.com/users/sign_out", {
+        axios.delete("/users/sign_out", {
          headers: {
            Authorization: `Bearer ${token}`,
            'Content-Type': 'application/json'

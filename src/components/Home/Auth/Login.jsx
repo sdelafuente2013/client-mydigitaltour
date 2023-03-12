@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { useAuth } from "./useAuth";
+import { useAuth } from "../../CustomHooks/useAuth";
+import { useDispatch } from "react-redux";
 export const Login = () => {
 
-  const { user, setUser, changeInput, handleLogin, setUrl, error  } = useAuth();
+const dispatch = useDispatch()
+  const { user, setUser, changeInput, handleLogin, setUrl, error  } = useAuth(dispatch);
   const [registro, setRegistro] = useState(false)
 
   useEffect(() =>{
@@ -47,6 +49,22 @@ export const Login = () => {
                      
                         <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre</label>
                         <input type="text" value={user.name} onChange={(e) => changeInput(e)} name="name" id="name"
+                         placeholder="Pedro Gomez" 
+                         className={`bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg 
+                         ${error.name ? 'focus:ring-red-600 focus:border-red-600' : ' focus:border-green-600'} 
+                         block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600  dark:text-white 
+                         dark:focus:ring-orange-500 dark:focus:border-orange-500`}                         />
+                         {error.name ? <p>{error.name}</p> : <p></p>}
+                       
+                    
+                        </div>
+                         : null
+                        }
+                        {registro ? 
+                    <div>
+                     
+                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Apellido</label>
+                        <input type="text" value={user.lastname} onChange={(e) => changeInput(e)} name="lastname" id="lastname"
                          placeholder="Pedro Gomez" 
                          className={`bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg 
                          ${error.name ? 'focus:ring-red-600 focus:border-red-600' : ' focus:border-green-600'} 

@@ -1,5 +1,5 @@
 import React from "react";
-import { useAuth } from "./useAuth";
+import { useAuth } from "../../CustomHooks/useAuth";
 
 export const GuiaRegister = () =>{
     const { user, setUser, changeInput, handleLogin, setUrl  } = useAuth();
