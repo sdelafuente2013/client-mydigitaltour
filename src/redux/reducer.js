@@ -10,7 +10,11 @@ export function rootReducer(state = initialState, action) {
         ...state,
         profile: action.payload
       };
- 
+      case "CLEANPROFILE":
+        return {
+          ...state,
+          profile: action.payload
+        };
     default:
       return state;
   }

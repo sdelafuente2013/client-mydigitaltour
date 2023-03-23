@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useAuth } from "../../CustomHooks/useAuth";
 
 export const GuiaRegister = () =>{
     const { user, setUser, changeInput, handleLogin, setUrl  } = useAuth();
 
+    useEffect(() =>{
+        setUrl("/users")
+    },[])
     return(
 <div class="h-full bg-gradient-to-tl from-orange-900 to-orange-400 w-full py-16 px-4">
             <div class="flex flex-col items-center justify-center">
@@ -17,20 +20,15 @@ export const GuiaRegister = () =>{
                             <label id="email" class="text-sm font-medium leading-none text-gray-800">
                                 Nombre
                             </label>
-                            <input onChange={(e) => changeInput(e)} value={user.name} aria-labelledby="email" name="name" type="text" class="bg-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"/>
+                            <input onChange={(e) => changeInput(e)} value={user.name} aria-labelledby="name" name="name" type="text" class="bg-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"/>
                         </div>
                         <div>
                             <label id="email" class="text-sm font-medium leading-none text-gray-800">
                                 Apellido
                             </label>
-                            <input onChange={(e) => changeInput(e)} value={user.lastname} name="lastname" aria-labelledby="email" type="text" class="bg-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"/>
+                            <input onChange={(e) => changeInput(e)} value={user.lastname} name="lastname" aria-labelledby="lastname" type="text" class="bg-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"/>
                         </div>
-                        <div>
-                            <label id="email" class="text-sm font-medium leading-none text-gray-800">
-                                ¿Por que te gustaria ser guia?
-                            </label>
-                            <textarea onChange={(e) => changeInput(e)} value={user.about} name="about" aria-labelledby="email" type="text" class="bg-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"/>
-                        </div>
+                        
                         <div>
                             <label id="email" class="text-sm font-medium leading-none text-gray-800">
                                 Email

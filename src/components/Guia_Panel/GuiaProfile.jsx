@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react"
-import axios from "axios"
+import React from "react"
 import { NavPanel } from "./NavPanel";
 import { GuiaMenu } from "./GuiaMenu";
 import { useSelector } from "react-redux";
@@ -7,7 +6,7 @@ import { useSelector } from "react-redux";
 export const GuiaProfile = () =>{
   
 const profile = useSelector(state => state.profile)
-
+console.log(profile)
  return(
 <div>
   <NavPanel nombre={profile?.name} apellido={profile?.lastname} profilePic={profile?.profilePic} verificacion={profile?.status}/>

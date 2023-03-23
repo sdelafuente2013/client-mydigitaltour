@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import style from "./CiCards.module.css"
+
 export const CiCards = ({img, image, name, id}) =>{
     return(
 

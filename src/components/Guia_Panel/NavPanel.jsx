@@ -26,7 +26,8 @@ const token = localStorage.getItem("accessToken")
     <div class="flex items-center">
       <img src={props?.profilePic} class="h-9 mr-5 sm:h-9" alt="ProfilePic" />
       <div>
-        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">{`${props?.nombre} ${props?.apellido}`}</span>
+        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">{`${props?.nombre} ${props?.apellido}  `}</span>
+        <br></br>
         {!props.verificado ? 
         <span class="text-green-500 text-sm font-medium"> Usuario Verificado</span>
         :

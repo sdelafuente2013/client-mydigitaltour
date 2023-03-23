@@ -1,8 +1,8 @@
-import axios from "axios";
+// import axios from "axios";
 
-const token = localStorage.getItem("accessToken")
+// const token = localStorage.getItem("accessToken")
 
-let url = "http://[::1]:3000"
+// let url = "http://[::1]:3000"
 
 
 export const getInfo = (payload) => {
@@ -10,6 +10,15 @@ export const getInfo = (payload) => {
    return{
     type: "SETPROFILE",
     payload,
+   }
+
+}
+export const cleanInfo = (payload) => {
+
+   return{
+    type: "CLEANPROFILE",
+    payload,
+
    }
 
 }

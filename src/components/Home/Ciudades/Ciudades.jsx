@@ -14,7 +14,7 @@ useEffect( ()=>{
     setCiudad(citys)
 }, [])
 
-const select  = ciudad?.filter((ele) => parseInt(ele.id) == parseInt(id))
+const select  = ciudad?.filter((ele) => parseInt(ele.id) === parseInt(id))
 
     return(
 <div>

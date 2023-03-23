@@ -1,15 +1,14 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { CiCards } from "./CiCards";
-import style from "./Citys.module.css"
 const citys = require("./City.json")
  const Citys = () =>{
 
     const [city, setCity] = useState()
 
-    useEffect(async ()=>{
+    useEffect(()=>{
         setCity(citys)
-    })
+    },[])
 return(
 <div className="md:grid grid-cols-3  gap-4 ms:grid-cols-1 my-3" >
   {city?.map((ele) => (
